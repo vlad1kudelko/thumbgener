@@ -4,6 +4,9 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
+authors = [
+    { name = "Vlad Kudelko", email = "vlad1kudelko@gmail.com" }
+]
 dependencies = [
     "pillow>=12.2.0",
 ]
