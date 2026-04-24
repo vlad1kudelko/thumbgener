@@ -9,4 +9,8 @@ authors = [
 ]
 dependencies = [
     "pillow>=12.2.0",
+    "typer>=0.24.2",
 ]
+
+[project.scripts]
+thumbgener-cli = "thumbgener.cli:main"

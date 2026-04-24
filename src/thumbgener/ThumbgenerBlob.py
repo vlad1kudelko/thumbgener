@@ -2,14 +2,15 @@ import random
 
 from PIL import Image, ImageDraw, ImageFilter
 
-from src.thumbgener.Thumbgener import Thumbgener
+from .Thumbgener import Thumbgener
 
 
 class ThumbgenerBlob(Thumbgener):
     def __init__(self):
+        super().__init__()
         self.count_ellipse = 20
 
-    def draw(self, title, filename) -> None:
+    def draw(self, title: str, filename: str) -> None:
         # 1. рисуем холст
         bg_color = tuple(random.randint(230, 255) for _ in range(3))
         image = Image.new("RGBA", (self.width, self.height), bg_color)
