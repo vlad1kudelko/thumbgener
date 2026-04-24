@@ -1,6 +1,6 @@
 [project]
 name = "thumbgener"
-version = "0.1.1"
+version = "0.1.2"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -14,9 +14,3 @@ dependencies = [
 
 [project.scripts]
 thumbgener-cli = "thumbgener.cli:main"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/thumbgener"]
-
-[tool.hatch.build.targets.wheel.shared-data]
-"src/thumbgener/fonts" = "thumbgener/fonts"
