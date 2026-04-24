@@ -13,7 +13,7 @@ class ThumbgenerBlob(Thumbgener):
     def draw(self, title: str, filename: str) -> None:
         # 1. рисуем холст
         bg_color = tuple(random.randint(230, 255) for _ in range(3))
-        image = Image.new("RGBA", (self.width, self.height), bg_color)
+        image = Image.new("RGB", (self.width, self.height), bg_color)
         draw = ImageDraw.Draw(image)
 
         # 2. рисуем капли
@@ -33,5 +33,4 @@ class ThumbgenerBlob(Thumbgener):
         self.draw_text(title, draw)
 
         # 5. сохраняем в файл
-        image = image.convert("RGB")  # убираем альфа-канал
-        image.convert("RGB").save(filename)
+        image.save(filename)
