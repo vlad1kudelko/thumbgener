@@ -1,3 +1,3 @@
-from .main import ThumbgenerBlob
+from .ThumbgenerBlob import ThumbgenerBlob
 
 __all__ = ["ThumbgenerBlob"]
