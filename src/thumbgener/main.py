@@ -37,10 +37,7 @@ class ThumbgenerBlob:
 
         # 2. рисуем капли
         for _ in range(self.count_ellipse):
-            color = (
-                *[random.randint(100, 255) for _ in range(3)],
-                random.randint(50, 150),
-            )
+            color = tuple(random.randint(100, 255) for _ in range(3))
             blob_size = random.randint(100, 300)  # диаметр окружности
             half_size = blob_size // 2  # т.к. рисуем от левого верхнего угла окружности
             x = random.randint(-half_size, self.width - half_size)
@@ -76,3 +73,11 @@ class ThumbgenerBlob:
         # 8. сохраняем в файл
         image = image.convert("RGB")  # убираем альфа-канал
         image.convert("RGB").save(filename)
+
+
+if __name__ == "__main__":
+    thumb = ThumbgenerBlob()
+    thumb.draw(
+        "1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0",
+        "test.webp",
+    )
