@@ -70,7 +70,3 @@ uv sync
 # Запуск CLI локально
 uv run thumbgener-cli --help
 ```
-
-## Лицензия
-
-Распространяется под лицензией MIT.

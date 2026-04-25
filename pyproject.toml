@@ -1,8 +1,22 @@
 [project]
 name = "thumbgener"
-version = "0.1.6"
+version = "0.1.7"
 description = "Simple Python tool and library for generating stylish blog post thumbnails and covers"
+keywords = [
+    "automation",
+    "banner",
+    "blog-cover",
+    "cli",
+    "covers",
+    "generator",
+    "image-automation",
+    "pillow",
+    "thumbnail",
+    "thumbnails",
+    "typography",
+]
 readme = "README.md"
+license-files = [ "LICENSE" ]
 requires-python = ">=3.12"
 authors = [
     { name = "Vlad Kudelko", email = "vlad1kudelko@gmail.com" }
@@ -11,6 +25,11 @@ dependencies = [
     "pillow>=12.2.0",
     "typer>=0.24.2",
 ]
+
+[project.urls]
+Homepage = "https://github.com/vlad1kudelko/thumbgener"
+Source = "https://github.com/vlad1kudelko/thumbgener"
+Issues = "https://github.com/vlad1kudelko/thumbgener/issues"
 
 [project.scripts]
 thumbgener-cli = "thumbgener.cli:main"
