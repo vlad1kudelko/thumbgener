@@ -6,8 +6,21 @@ from .Thumbgener import Thumbgener
 
 
 class ThumbgenerBlob(Thumbgener):
-    def __init__(self):
-        super().__init__()
+    def __init__(
+        self,
+        width: int = 800,
+        height: int = 400,
+        padding: int = 50,
+        font_size: int = 50,
+        line_padding: int = 10,
+    ):
+        super().__init__(
+            width=width,
+            height=height,
+            padding=padding,
+            font_size=font_size,
+            line_padding=line_padding,
+        )
         self.count_ellipse = 20
 
     def draw(self, title: str, filename: str) -> None:
